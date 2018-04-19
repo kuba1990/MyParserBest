@@ -4,13 +4,9 @@ daysPolish: poniedzialek,wtorek,sroda,czwartek,piatek,sobota,niedziela
 
 #MAP
 keyMapping:
-Monday: 'poniedzialek'
-Tuesday: 'wtorek'
-Wednesday: 'sroda'
-Thursday: 'czwartek'
-Friday: 'piatek'
-Saturday: 'sobota'
-Sunday: 'niedziela'
+Monday: poniedzialek
+Tuesday: wtorek
+Wednesday: sroda
 
 
 my:
