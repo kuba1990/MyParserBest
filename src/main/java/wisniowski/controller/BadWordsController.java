@@ -37,3 +37,8 @@ public class BadWordsController {
 
 
 }
+
+//
+        /*{
+        "content": "Attentiion:  kurza twarza,kurka,cholera,błyskawica Poland’s censorship machine is working "
+        }*/

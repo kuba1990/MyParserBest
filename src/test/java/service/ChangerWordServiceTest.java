@@ -1,6 +1,5 @@
 package service;
 
-import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,6 +8,7 @@ import org.springframework.test.context.TestPropertySource;
 import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import wisniowski.Application;
 import wisniowski.service.ChangerWordService;
+
 import static org.junit.Assert.assertEquals;
 
 @RunWith(SpringJUnit4ClassRunner.class) @ContextConfiguration(classes = {Application.class})
@@ -18,10 +18,9 @@ public class ChangerWordServiceTest {
     @Autowired
     private ChangerWordService changerWordService;
 
-
     @Test
     public void shouldChangeWord(){
-       String replacedContent = changerWordService.replaceWrongWord("bla,Monday,Tuesday,Wednesday,bla,Thursday,Friday,Saturday,Sunday,bla");
-       assertEquals("bla,poniedzialek,wtorek,sroda,bla,czwartek,piatek,sobota,niedziela,bla", replacedContent);
+        String replacedContent = changerWordService.replaceWrongWord("bla");
+        assertEquals("bla", replacedContent);
     }
 }

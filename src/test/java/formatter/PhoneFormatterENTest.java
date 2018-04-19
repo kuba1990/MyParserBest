@@ -6,7 +6,6 @@ import org.mockito.Mockito;
 import org.springframework.beans.factory.annotation.Autowired;
 import wisniowski.configuration.PatternConfig;
 import wisniowski.formatter.PhoneNumberFormatterEN;
-import wisniowski.formatter.PhoneNumberFormatterPL;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -36,6 +35,6 @@ public class PhoneFormatterENTest {
         patterns.add("(\\d{2})(\\d{3})(\\d{4})");
         when(patternConfig.getPatterns()).thenReturn(patterns);
         String formattedNumber = phoneNumberFormatterEN.format("123456789");
-        assertEquals("(+44)123-456-789", formattedNumber);
+        assertEquals("123-456-789", formattedNumber);
     }
 }

@@ -35,3 +35,5 @@ public class ChangerWordController {
 
     }
 }
+//example:
+// "content": "Monday,Tuesday,Mittwoch"

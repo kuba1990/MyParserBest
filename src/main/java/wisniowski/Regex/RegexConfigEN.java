@@ -1,4 +1,3 @@
-/*
 package wisniowski.Regex;
 
 import org.springframework.stereotype.Component;
@@ -19,4 +18,3 @@ public class RegexConfigEN implements RegexNumber {
         return regex;
     }
 }
-*/

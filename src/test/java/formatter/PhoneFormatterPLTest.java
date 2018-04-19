@@ -43,11 +43,8 @@ public class PhoneFormatterPLTest {
         List<String> patterns = new ArrayList<>();
         patterns.add("(\\d{3})(\\d{3})(\\d{3})");
         patterns.add("(\\d{2})(\\d{3})(\\d{4})");
-
-
         when(patternConfig.getPatterns()).thenReturn(patterns);
-
         String formattedNumber = phoneNumberFormatterPL.format("878927299");
-        assertEquals("(+48)87-892-7299", formattedNumber);
+        assertEquals("87-892-7299", formattedNumber);
     }
 }

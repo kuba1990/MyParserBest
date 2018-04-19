@@ -36,18 +36,8 @@ public class ChangeWordControllerTest {
     public void init() {
         changerWordServiceMock = Mockito.mock(ChangerWordService.class);
         controller = new ChangerWordController(changerWordServiceMock);
-
-
     }
 
-    @Test
-    public void shouldVerifyMessage() {
-        Message msg = new Message();
-        msg.setTitle("PL");
-        msg.setContent("poniedzialek");
-
-        assertThat(restTemplate.postForObject(localhostWithPort("changer"), msg, Message.class)).hasFieldOrProperty(CONTENT).isEqualTo("poniedzialek");
-    }
     @Test
     public void shouldResponseBadRequest() {
         Message msg = new Message();

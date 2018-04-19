@@ -13,16 +13,20 @@ public class FindNumberInContentService {
     private static List<String> getNumber = new ArrayList<String>();
 
     @Qualifier("RegexConfig")
-    private RegexNumber regexConfig;
+    private RegexNumber regexConfigEN;
 
-    public FindNumberInContentService(RegexNumber regexConfig) {
-        this.regexConfig = regexConfig;
+    @Qualifier("RegexConfig")
+    private RegexNumber regexConfigPL;
+
+    public FindNumberInContentService(RegexNumber regexConfigEN, RegexNumber regexConfigPL) {
+        this.regexConfigEN = regexConfigEN;
+        this.regexConfigPL = regexConfigPL;
     }
 
     public List<String> getNumbers(String content) {
         String[] words = content.split("\\s");
         for (String s : words) {
-            if (s.matches((regexConfig.format()))) {
+            if (s.matches((regexConfigPL.format())) || s.matches((regexConfigEN.format()))) {
                 getNumber.add(s);
             }
         } return getNumber;
