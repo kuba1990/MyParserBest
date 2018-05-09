@@ -21,14 +21,13 @@ import static org.assertj.core.api.Assertions.assertThat;
 @SpringBootTest(webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT, classes = {Application.class})
 public class ChangeWordControllerTest {
 
+    private static final String HTTP_LOCALHOST = "http://localhost";
     private ChangerWordService changerWordServiceMock;
     private ChangerWordController controller;
 
-    private static final String HTTP_LOCALHOST = "http://localhost";
-    private static final String TITLE = "title";
-    private static final String CONTENT = "content";
     @LocalServerPort
     private int port;
+
     @Autowired
     private TestRestTemplate restTemplate;
 

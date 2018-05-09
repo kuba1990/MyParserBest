@@ -2,12 +2,11 @@ package wisniowski.formatter;
 
 import org.springframework.stereotype.Component;
 import wisniowski.configuration.PatternConfig;
-import wisniowski.configuration.WordsConfig;
 
 @Component
 public class PhoneNumberFormatterEN implements PhoneNumberFormatter {
 
-   private PatternConfig patternConfig;
+    private PatternConfig patternConfig;
 
     public PhoneNumberFormatterEN(PatternConfig patternConfig) {
         this.patternConfig = patternConfig;

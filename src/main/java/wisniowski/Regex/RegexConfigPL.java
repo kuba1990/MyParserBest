@@ -4,7 +4,7 @@ import org.springframework.stereotype.Component;
 import wisniowski.configuration.PatternConfig;
 
 @Component
-public class RegexConfigPL implements RegexNumber{
+public class RegexConfigPL implements RegexNumber {
 
     private PatternConfig patternConfig;
 

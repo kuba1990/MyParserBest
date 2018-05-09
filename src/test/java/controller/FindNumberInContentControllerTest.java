@@ -1,6 +1,5 @@
 package controller;
 
-
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -12,9 +11,8 @@ import wisniowski.controller.FindNumberInContentController;
 import wisniowski.model.Message;
 import wisniowski.service.FindNumberInContentService;
 
-
 @RunWith(SpringRunner.class)
-@SpringBootTest(/*webEnvironment = SpringBootTest.WebEnvironment.RANDOM_PORT,*/ classes = {Application.class})
+@SpringBootTest(classes = {Application.class})
 public class FindNumberInContentControllerTest {
 
     private FindNumberInContentService findNumberInContentServiceMock;

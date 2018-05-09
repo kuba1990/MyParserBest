@@ -9,13 +9,10 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.boot.test.web.client.TestRestTemplate;
 import org.springframework.boot.web.server.LocalServerPort;
-import org.springframework.http.HttpStatus;
 import org.springframework.test.context.junit4.SpringRunner;
 import wisniowski.Application;
-import wisniowski.controller.ChangerWordController;
 import wisniowski.controller.ParserNumbersController;
 import wisniowski.model.Message;
-import wisniowski.service.ChangerWordService;
 import wisniowski.service.NumberService;
 
 import static org.assertj.core.api.Assertions.assertThat;
@@ -27,7 +24,6 @@ public class ParserNumbersControllerTest {
 
     private static final String HTTP_LOCALHOST = "http://localhost";
     private static final String TITLE = "title";
-    private static final String CONTENT = "content";
     @LocalServerPort
     private int port;
     @Autowired
@@ -35,7 +31,6 @@ public class ParserNumbersControllerTest {
 
     private ParserNumbersController controller;
     private NumberService service;
-
 
 
     @Before
@@ -56,14 +51,13 @@ public class ParserNumbersControllerTest {
 
     @Test(expected = IllegalArgumentException.class)
     public void shouldIllegalArgumentExceptionWhenNumberOfDigitLowerThan9() {
-        Message  msg = new Message();
+        Message msg = new Message();
         msg.setContent("123");
         msg.setTitle("PL");
         msg.setRegex(null);
         controller.wordChanger(msg);
 
     }
-
 
 
     private String localhostWithPort(String path) {

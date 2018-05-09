@@ -1,13 +1,10 @@
 package wisniowski.formatter;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import wisniowski.configuration.PatternConfig;
-import wisniowski.configuration.WordsConfig;
 
 @Component
 public class PhoneNumberFormatterPL implements PhoneNumberFormatter {
-
 
     private PatternConfig patternConfig;
 

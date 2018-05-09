@@ -29,7 +29,8 @@ public class FindNumberInContentService {
             if (s.matches((regexConfigPL.format())) || s.matches((regexConfigEN.format()))) {
                 getNumber.add(s);
             }
-        } return getNumber;
+        }
+        return getNumber;
     }
 }
 

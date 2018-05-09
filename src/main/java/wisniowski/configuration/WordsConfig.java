@@ -5,6 +5,7 @@ import org.springframework.context.annotation.Configuration;
 
 @Configuration
 public class WordsConfig {
+
     @Value("${words}")
     private String words;
 

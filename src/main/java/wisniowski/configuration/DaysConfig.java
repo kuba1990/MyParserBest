@@ -10,7 +10,7 @@ import java.util.Map;
 @EnableConfigurationProperties
 @ConfigurationProperties
 public class DaysConfig {
-    Map<String,String> mappingDays;
+    Map<String, String> mappingDays;
 
     public Map<String, String> getMappingDays() {
         return mappingDays;

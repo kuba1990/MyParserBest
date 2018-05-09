@@ -14,10 +14,11 @@ public class PatternConfig {
 
     private List<String> patterns = new ArrayList<String>();
 
-    public void setPatterns(List<String> patterns) {
-        this.patterns = patterns;
-    }
     public List<String> getPatterns() {
         return this.patterns;
+    }
+
+    public void setPatterns(List<String> patterns) {
+        this.patterns = patterns;
     }
 }

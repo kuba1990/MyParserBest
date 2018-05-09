@@ -24,12 +24,14 @@ public class NumberServiceTest {
         phoneNumberFormatterEN = Mockito.mock(PhoneNumberFormatterEN.class);
         numberService = new NumberService(phoneNumberFormatterPL, phoneNumberFormatterEN);
     }
+
     @Test
     public void shouldSwitchLanguage() {
         Message message = new Message();
         message.setTitle("PL");
         numberService.languageDispatcher(message);
     }
+
     @Test
     public void shouldFormatWhenTitleIsPL() {
         Message message = new Message();
@@ -42,6 +44,7 @@ public class NumberServiceTest {
         assertEquals(number, formattedTextToPL);
 
     }
+
     @Test
     public void shouldFormatWhenTitleIsEN() {
         Message message = new Message();

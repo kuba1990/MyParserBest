@@ -14,8 +14,9 @@ import wisniowski.service.ChangerWordService;
 
 import static org.junit.Assert.assertEquals;
 
-@RunWith(SpringJUnit4ClassRunner.class) @ContextConfiguration(classes = {Application.class})
-@TestPropertySource(locations="classpath:application.yml")
+@RunWith(SpringJUnit4ClassRunner.class)
+@ContextConfiguration(classes = {Application.class})
+@TestPropertySource(locations = "classpath:application.yml")
 public class ChangerWordServiceTest {
 
     @Autowired
@@ -30,7 +31,7 @@ public class ChangerWordServiceTest {
     }
 
     @Test
-    public void shouldNotChangeWord(){
+    public void shouldNotChangeWord() {
         String replacedContent = changerWordService.replaceWrongWord("bla");
         assertEquals("bla", replacedContent);
     }

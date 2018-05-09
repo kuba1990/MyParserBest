@@ -20,7 +20,7 @@ public class FindNumberInContentController {
     }
 
     @PostMapping("/numberContent")
-    public List <String> getContent(@RequestBody Message msg){
+    public List<String> getContent(@RequestBody Message msg) {
         if (validateRequest(msg) == true) {
             return findNumberInContentService.getNumbers(msg.getContent());
         } else {

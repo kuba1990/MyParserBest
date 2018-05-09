@@ -21,10 +21,10 @@ public class ParserNumbersController {
 
     @PostMapping("/numberFormatter")
     public ResponseEntity<Message> wordChanger(@RequestBody Message msg) {
-        if (validateRequest(msg) == false || validateReqeustByCountry(msg)==false ) {
+        if (validateRequest(msg) == false || validateReqeustByCountry(msg) == false) {
             return new ResponseEntity(HttpStatus.BAD_REQUEST);
         }
-        if(msg.getContent().length() < 9){
+        if (msg.getContent().length() < 9) {
             throw new IllegalArgumentException("number should contains 9 digits");
         }
         return new ResponseEntity(new Message(msg.getTitle(), numberService.languageDispatcher(msg), msg.getRegex()), HttpStatus.OK);
@@ -37,6 +37,7 @@ public class ParserNumbersController {
         return true;
 
     }
+
     private boolean validateReqeustByCountry(Message msg) {
         if (msg.getTitle().equals("PL") || msg.getTitle().equals("EN")) {
             return true;
